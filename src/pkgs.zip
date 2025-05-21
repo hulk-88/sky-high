@@ -1,0 +1,11 @@
+# Inside dev.nix
+{
+  pkgs ? import <nixpkgs> {}
+}:
+
+pkgs.mkShell {
+  buildInputs = [
+    pkgs.zip
+    # other packages...
+  ];
+}
